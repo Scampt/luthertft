@@ -8,6 +8,53 @@ body {
     overflow: hidden;
 }
 
+.circle {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    top: 50px;
+    animation-name: moverBola;
+    animation-duration: 4.5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border: 1px solid #000;
+    border-radius: 100px;
+}
+.circle-two {
+    width: 50px;
+    height: 50px;
+    background: green;
+    position: absolute;
+    top: 50px;
+    animation-name: moverBola2;
+    animation-duration: 4.5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border: 1px solid #000;
+    border-radius: 100px;
+}
+
+@keyframes moverBola {
+    0% {
+        transform: translate(-100px, 600px);
+    }
+    100% {
+        transform: translate(600px, -100px);
+    }
+}
+
+@keyframes moverBola2 {
+    0% {
+        transform: translate(0px, -150px);
+    }
+    100% {
+        transform: translate(600px, 600px);
+    }
+}
+
 .luther-info {
     text-align: center;
     width: 100%;
@@ -31,6 +78,7 @@ body {
     width: 440px;
     box-shadow: 11px 13px 13px 0px rgba(0,0,0,0.74);
 }
+
 
 /* MEDIAQUERIES */
 @media (min-width:768px) {
