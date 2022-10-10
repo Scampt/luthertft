@@ -6,78 +6,229 @@
 
 body {
     overflow: hidden;
+    text-align: center;
+    color: #fff;
+    /* background-image: url("../img/giphy-gif-2.gif"); */
+    background-color: #000;
+    background-size: 150px;
+    background-attachment: fixed;
 }
 
-.circle {
-    width: 50px;
-    height: 50px;
-    background: red;
+/* ESTRELLAS */
+/* section {
     position: absolute;
-    top: 50px;
-    animation-name: moverBola;
-    animation-duration: 4.5s;
-    animation-direction: alternate-reverse;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    border: 1px solid #000;
-    border-radius: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-position-x: center;
+    background-size: cover;
+    animation: animateBg 50s linear infinite;
 }
-.circle-two {
-    width: 50px;
-    height: 50px;
-    background: green;
+    @keyframes animateBg {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+        }
+    }
+    span {
     position: absolute;
-    top: 50px;
-    animation-name: moverBola2;
-    animation-duration: 4.5s;
-    animation-direction: alternate-reverse;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    border: 1px solid #000;
-    border-radius: 100px;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+    animation: animate 3s linear infinite;
 }
-
-@keyframes moverBola {
+    span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+    @keyframes animate {
     0% {
-        transform: translate(-100px, 600px);
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
     }
     100% {
-        transform: translate(600px, -100px);
+        transform: rotate(315deg) translateX(-800px);
+        opacity: 0;
     }
 }
+    span:nth-child(1) {
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0;
+    animation-duration: 1s;
+}
 
-@keyframes moverBola2 {
-    0% {
-        transform: translate(0px, -150px);
-    }
-    100% {
-        transform: translate(600px, 600px);
-    }
+    span:nth-child(2) {
+    top: 0;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+}
+
+    span:nth-child(3) {
+    top: 80px;
+    right: 0px;
+    left: initial;
+    animation-delay: 0.4s;
+    animation-duration: 2s;
+}
+
+    span:nth-child(4) {
+    top: 0;
+    right: 180px;
+    left: initial;
+    animation-delay: 0.6s;
+    animation-duration: 1.5s;
+}
+
+    span:nth-child(5) {
+    top: 0;
+    right: 400px;
+    left: initial;
+    animation-delay: 0.8s;
+    animation-duration: 2.5s;
+}
+
+    span:nth-child(6) {
+    top: 0;
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+    span:nth-child(7) {
+    top: 300px;
+    right: 0px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 1.75s;
+}
+
+    span:nth-child(8) {
+    top: 0px;
+    right: 700px;
+    left: initial;
+    animation-delay: 1.4s;
+    animation-duration: 1.25s;
+}
+
+    span:nth-child(9) {
+    top: 0px;
+    right: 1000px;
+    left: initial;
+    animation-delay: 0.75s;
+    animation-duration: 2.25s;
+}
+
+    span:nth-child(10) {
+    top: 0px;
+    right: 1000px;
+    left: initial;
+    animation-delay: 2.75s;
+    animation-duration: 2.25s;
+} */
+
+.cofre {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    align-items: center;
+}
+
+/* .input-cofre {
+    display: none;
+} */
+
+.ocultar {
+    display: none;
 }
 
 .luther-info {
     text-align: center;
-    width: 100%;
-    height: 650px;
-    border: 2px solid #000;
-    background-color: rgb(224, 151, 92);
-}
-
-.luther-titulo {
-    padding: 50px 0;
-    font-size: 50px;
-    color: #602a0b;
-    font-style: italic;
-    font-weight: 800;
 }
 
 .luther-box {
+    display: none;
     margin: auto;
 }
 .luther-box img {
-    width: 440px;
-    box-shadow: 11px 13px 13px 0px rgba(0,0,0,0.74);
+    width: 220px;
 }
+
+.luther-texto {
+    width: 100%;
+    height: 50vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.luther-texto li {
+    position: absolute;
+    animation: cambiarTexto 8s ease-in-out 1s  backwards;
+    font-size: 50px;
+}
+
+.alien-word {
+    color: blueviolet;
+}
+
+li:nth-child(1) {
+    animation-delay: 0s;
+    opacity: 0;
+}
+li:nth-child(2) {
+    animation-delay: 2s;
+    opacity: 0;
+}
+li:nth-child(3) {
+    animation-delay: 4s;
+    opacity: 0;
+}
+li:nth-child(4) {
+    animation-delay: 6s;
+    opacity: 0;
+}
+li:nth-child(5) {
+    animation-delay: 8s;
+    opacity: 0;
+}
+
+@keyframes cambiarTexto {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -70%, 0);
+    }
+    2.5%, 25% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+
+    27.5%, 100% {
+        opacity: 0;
+        transform: translate3d(-50px, 0, 50px);
+    }
+}
+
 
 
 /* MEDIAQUERIES */
