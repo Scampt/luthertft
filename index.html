@@ -13,54 +13,31 @@
 </head>
 <body>
         <main>
-                <!-- <section>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </section> -->
-
                 <div class="luther-info">
                     <figure class="luther-box" id="luther">
                         <img src="img/luther.png" alt="" srcset="">
                     </figure>
                     
                     <div class="cofre" id="cofre-box">
-                        <!-- <input class="input-cofre" type="checkbox" name="cofre" id="cofre">
-                        <label for="cofre">
-                            <img class="cofre-img" src="img/giphy.gif" alt="" id="gif-chest">
-                        </label> -->
-                            <a href="javascript:;" onclick="sup1.play(); return false;" id="gif-link">
-                                <img id="cofre2" class="cofre-img" src="" rel:animated_src="img/giphy.gif" rel:auto_play="0"/>
+                            <a href="javascript:;" class="link-gif" onclick="sup1.play(); return false;" id="gif-link">
+                                <img id="cofre2" class="cofre-img" src="" rel:animated_src="img/cofre.gif" rel:auto_play="0"/>
                             </a>
                     </div>
-                    
                 <ul class="luther-texto" id="lutherTexto">
                     <li>Vaya... !Veo que me has encontrado!</li>
                     <li>Para serte sincero no pensé que fueras a encontrarme tan rápido...</li>
                     <li>Permiteme presentarme viajero...</li>
                     <li>Verás, soy Luther, vengo de <span class="alien-word">#?%&$!</span>, tuve conflictos después de haber <span class="alien-word">+#$@&</span> en <span class="alien-word">$?#&+</span> y he terminado aquí.</li>
                     <li class="hub">Bienvenido a mi mundo Viajero, prepárate para lo que está por venir.</li>
+                    <a href="#" class="link-hub" id="hub">Ir al HUB</a>
                 </ul>
             </div>
         </main>
-
         <script type="text/javascript">
             var sup1 = new SuperGif({ gif: document.getElementById('cofre2') } );
-
             sup1.load();
         </script>
-
         <script src="https://kit.fontawesome.com/5b339fc774.js" crossorigin="anonymous"></script>
         <script src="cofre.js"></script>
-
-        
-
 </body>
 </html>

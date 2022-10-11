@@ -8,183 +8,97 @@ body {
     overflow: hidden;
     text-align: center;
     color: #fff;
-    /* background-image: url("../img/giphy-gif-2.gif"); */
-    background-color: #000;
+    background-image: url("../img/estrellas.gif");
     background-size: 150px;
-    background-attachment: fixed;
 }
 
-/* ESTRELLAS */
-/* section {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-position-x: center;
-    background-size: cover;
-    animation: animateBg 50s linear infinite;
-}
-    @keyframes animateBg {
-    0%,
-    100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-        }
-    }
-    span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 4px;
-    height: 4px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
-    animation: animate 3s linear infinite;
-}
-    span::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 300px;
-    height: 1px;
-    background: linear-gradient(90deg, #fff, transparent);
-}
-    @keyframes animate {
-    0% {
-        transform: rotate(315deg) translateX(0);
-        opacity: 1;
-    }
-    70% {
-        opacity: 1;
-    }
-    100% {
-        transform: rotate(315deg) translateX(-800px);
-        opacity: 0;
-    }
-}
-    span:nth-child(1) {
-    top: 0;
-    right: 0;
-    left: initial;
-    animation-delay: 0;
-    animation-duration: 1s;
-}
-
-    span:nth-child(2) {
-    top: 0;
-    right: 80px;
-    left: initial;
-    animation-delay: 0.2s;
-    animation-duration: 3s;
-}
-
-    span:nth-child(3) {
-    top: 80px;
-    right: 0px;
-    left: initial;
-    animation-delay: 0.4s;
-    animation-duration: 2s;
-}
-
-    span:nth-child(4) {
-    top: 0;
-    right: 180px;
-    left: initial;
-    animation-delay: 0.6s;
-    animation-duration: 1.5s;
-}
-
-    span:nth-child(5) {
-    top: 0;
-    right: 400px;
-    left: initial;
-    animation-delay: 0.8s;
-    animation-duration: 2.5s;
-}
-
-    span:nth-child(6) {
-    top: 0;
-    right: 600px;
-    left: initial;
-    animation-delay: 1s;
-    animation-duration: 3s;
-}
-    span:nth-child(7) {
-    top: 300px;
-    right: 0px;
-    left: initial;
-    animation-delay: 1s;
-    animation-duration: 1.75s;
-}
-
-    span:nth-child(8) {
-    top: 0px;
-    right: 700px;
-    left: initial;
-    animation-delay: 1.4s;
-    animation-duration: 1.25s;
-}
-
-    span:nth-child(9) {
-    top: 0px;
-    right: 1000px;
-    left: initial;
-    animation-delay: 0.75s;
-    animation-duration: 2.25s;
-}
-
-    span:nth-child(10) {
-    top: 0px;
-    right: 1000px;
-    left: initial;
-    animation-delay: 2.75s;
-    animation-duration: 2.25s;
-} */
-
+/* GIF DEL COFRE */
 .cofre {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin: 200px;
     align-items: center;
 }
 
-/* .input-cofre {
-    display: none;
-} */
-
-.ocultar {
-    display: none;
+.ocultarGif {
+    animation: esconderGif .5s ease-in-out;
 }
 
+@keyframes esconderGif {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.quitarCofre {
+    cursor: default;
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+}
+
+/* informacion y foto de luther */
 .luther-info {
     text-align: center;
 }
 
 .luther-box {
     display: none;
-    margin: auto;
 }
+
+.mostrarLuther {
+    animation: mostrarLuther 2s ease-in-out;
+    display: block;
+}
+
+@keyframes mostrarLuther {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .luther-box img {
     width: 220px;
 }
 
 .luther-texto {
     width: 100%;
-    height: 50vh;
     display: none;
     justify-content: center;
     align-items: center;
-    list-style: none;
+    position: absolute;
+    top: 350px;
+}
+
+.mostrarLutherTexto {
+    animation: mostrarLutherTexto 3.5s ease-in-out;
+    display: flex;
+}
+
+@keyframes mostrarLutherTexto {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .luther-texto li {
     position: absolute;
-    animation: cambiarTexto 8s ease-in-out 1s  backwards;
+    list-style: none;
+    animation: cambiarTexto 8s ease-in-out backwards;
+    animation-delay: 3s;
     font-size: 50px;
 }
 
@@ -213,6 +127,33 @@ li:nth-child(5) {
     opacity: 0;
 }
 
+.link-hub {
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    position: absolute;
+    display: none;
+    top: 50px;
+}
+
+.link-hub:hover {
+    opacity: .7;
+}
+
+.mostrarHub {
+    animation-name: mostrarHub 1s;
+    animation-delay: 1s;
+}
+
+@keyframes mostrarHub {
+    from {
+        display: none;
+    }
+    to {
+        display: block;
+    }
+}
+
 @keyframes cambiarTexto {
     0% {
         opacity: 0;
@@ -229,17 +170,21 @@ li:nth-child(5) {
     }
 }
 
-
-
 /* MEDIAQUERIES */
 @media (min-width:768px) {
     main .luther-box img {
-        width: 440px
+        width: 240px
+    }
+    .luther-texto {
+        margin-top: 50px;
+    }
+    .luther-texto li {
+        font-size: 35px;
     }
 }
 
 @media  (min-width:1000px) {
     main .luther-box img {
-        width: 450px;
+        width: 220px;
     }
 }
