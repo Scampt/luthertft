@@ -16,7 +16,6 @@ body {
 .cofre {
     display: flex;
     justify-content: center;
-    margin: 200px;
     align-items: center;
 }
 
@@ -38,8 +37,6 @@ body {
     cursor: default;
     pointer-events: none;
     position: absolute;
-    bottom: 0;
-    top: 0;
 }
 
 /* informacion y foto de luther */
@@ -75,8 +72,6 @@ body {
     display: none;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 350px;
 }
 
 .mostrarLutherTexto {
@@ -95,6 +90,7 @@ body {
 }
 
 .luther-texto li {
+    margin-top: 50%;
     position: absolute;
     list-style: none;
     animation: cambiarTexto 8s ease-in-out backwards;
@@ -124,6 +120,10 @@ li:nth-child(4) {
 }
 li:nth-child(5) {
     animation-delay: 8s;
+    opacity: 0;
+}
+li:nth-child(6) {
+    animation-delay: 10s;
     opacity: 0;
 }
 
@@ -159,12 +159,12 @@ li:nth-child(5) {
         opacity: 0;
         transform: translate3d(0, -70%, 0);
     }
-    2.5%, 25% {
+    2.7%, 25% {
         opacity: 1;
         transform: translateZ(0);
     }
 
-    27.5%, 100% {
+    27.8%, 100% {
         opacity: 0;
         transform: translate3d(-50px, 0, 50px);
     }
@@ -175,11 +175,10 @@ li:nth-child(5) {
     main .luther-box img {
         width: 240px
     }
-    .luther-texto {
-        margin-top: 50px;
-    }
     .luther-texto li {
-        font-size: 35px;
+        margin-top: 30%;
+        position: absolute;
+        font-size: 50px;
     }
 }
 

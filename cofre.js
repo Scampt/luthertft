@@ -17,5 +17,5 @@ function cofreAbierto() {
     lutherTexto.classList.toggle("mostrarLutherTexto");
     lutherTexto.style.opacity = 1;
     linkHub.classList.toggle("mostrarHub")
-    // linkHub.style.display = "block"
+    linkHub.style.display = "block"
 }
