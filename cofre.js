@@ -3,6 +3,7 @@ let gifEnlace = document.getElementById("gif-link");
 let luther = document.getElementById("luther");
 let lutherTexto = document.getElementById("lutherTexto");
 let linkHub = document.getElementById("hub");
+let contenedorHub = document.getElementById("hub-box");
 
 
 gifEnlace.addEventListener("click", cofreAbierto)
@@ -16,6 +17,7 @@ function cofreAbierto() {
     luther.style.opacity = 1;
     lutherTexto.classList.toggle("mostrarLutherTexto");
     lutherTexto.style.opacity = 1;
+
     linkHub.classList.toggle("mostrarHub")
-    linkHub.style.display = "block"
+
 }
