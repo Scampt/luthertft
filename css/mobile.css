@@ -18,15 +18,18 @@ body {
 
 /* GIF DEL COFRE */
 .cofre {
-    display: flex;
+    width: 100%;
     position: absolute;
     top: 0;
     animation-name: animarCofre;
     animation-duration: 5s;
     animation-delay: 1s;
     animation-iteration-count: infinite;
-
 }
+
+/* .jsgif {
+    margin-left: 50px;
+} */
 
 @keyframes animarCofre {
     0% {
@@ -57,7 +60,6 @@ body {
 .quitarCofre {
     cursor: default;
     pointer-events: none;
-    position: absolute;
 }
 
 /* informacion y foto de luther */
@@ -116,7 +118,7 @@ body {
     margin-top: 50%;
     position: absolute;
     list-style: none;
-    animation: cambiarTexto 8s ease-in-out backwards;
+    animation: cambiarTexto 10s ease-in-out backwards;
     animation-delay: 3s;
     font-size: 50px;
 }
@@ -197,12 +199,12 @@ to {
         opacity: 0;
         transform: translate3d(0, -70%, 0);
     }
-    2.7%, 25% {
+    3.7%, 18% {
         opacity: 1;
         transform: translateZ(0);
     }
 
-    27.4%, 100% {
+    19.4%, 100% {
         opacity: 0;
         transform: translate3d(-50px, 0, 50px);
     }
