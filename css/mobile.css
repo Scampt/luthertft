@@ -31,31 +31,13 @@ body {
     margin-left: 50px;
 } */
 
-@keyframes animarCofre {
-    0% {
-        margin: 0;
-    }
-    50% {
-        margin-top: 500px;
-    }
-    100% {
-        margin: 0;
-    }
-}
+
 
 .ocultarGif {
     animation: esconderGif .5s ease-in-out;
 }
 
-@keyframes esconderGif {
-    0% {
-        opacity: 1;
-    }
 
-    100% {
-        opacity: 0;
-    }
-}
 
 .quitarCofre {
     cursor: default;
@@ -77,15 +59,7 @@ body {
     display: block;
 }
 
-@keyframes mostrarLuther {
-    0% {
-        opacity: 0;
-    }
 
-    100% {
-        opacity: 1;
-    }
-}
 
 .luther-box img {
     width: 220px;
@@ -100,62 +74,32 @@ body {
 }
 
 .mostrarLutherTexto {
-    animation: mostrarLutherTexto 3.5s ease-in-out;
+    animation: mostrarLutherTexto 1.5s ease-in-out;
     display: flex;
 }
 
-@keyframes mostrarLutherTexto {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+.luther-texto li {
+    opacity: 0;
 }
 
-.luther-texto li {
-    margin-top: 50%;
+.animarTextoEntrada {
+    margin-top: 30%;
     position: absolute;
+    text-align: center;
     list-style: none;
-    animation: cambiarTexto 10s ease-in-out backwards;
-    animation-delay: 3s;
+    animation: cambiarTexto 5s 1;
     font-size: 50px;
+    opacity: 1;
+}
+
+.animarTextoSalida {
+    animation: ocultarTexto .1s 1;
 }
 
 .alien-word {
     color: blueviolet;
 }
 
-li:nth-child(1) {
-    animation-delay: 0s;
-    opacity: 0;
-}
-li:nth-child(2) {
-    animation-delay: 2s;
-    opacity: 0;
-}
-li:nth-child(3) {
-    animation-delay: 4s;
-    opacity: 0;
-}
-li:nth-child(4) {
-    animation-delay: 6s;
-    opacity: 0;
-}
-li:nth-child(5) {
-    animation-delay: 8s;
-    opacity: 0;
-}
-li:nth-child(6) {
-    animation-delay: 10s;
-    opacity: 0;
-}
-
-li:nth-child(7) {
-    animation-delay: 12s;
-    opacity: 0;
-}
 
 /* IR AL HUB */
 .hub-box {
@@ -177,53 +121,109 @@ li:nth-child(7) {
 .mostrarHub {
     animation-name: mostrarHub;
     animation-duration: 1s;
-    animation-delay: 14s;
     animation-fill-mode: forwards;
     visibility: hidden;
     display: block;
 }
 
-@keyframes mostrarHub {
-from {
-    opacity: 0;
-}
-to {
-    opacity: 1;
-    visibility: visible;
-}
 
-}
-
-@keyframes cambiarTexto {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, -70%, 0);
-    }
-    3.7%, 18% {
-        opacity: 1;
-        transform: translateZ(0);
-    }
-
-    19.4%, 100% {
-        opacity: 0;
-        transform: translate3d(-50px, 0, 50px);
-    }
-}
 
 /* MEDIAQUERIES */
 @media (min-width:768px) {
     main .luther-box img {
         width: 240px
     }
-    .luther-texto li {
-        margin-top: 30%;
-        position: absolute;
-        font-size: 50px;
+}
+
+@media (min-width:1000px) {
+    main .luther-box img {
+        width: 220px;
     }
 }
 
-@media  (min-width:1000px) {
-    main .luther-box img {
-        width: 220px;
+
+@keyframes mostrarHub {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+
+@keyframes cambiarTexto {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ocultarTexto {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+@keyframes mostrarLutherTexto {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes mostrarLuther {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes esconderGif {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animarCofre {
+    0% {
+        margin: 0;
+    }
+
+    50% {
+        margin-top: 500px;
+    }
+
+    100% {
+        margin: 0;
     }
 }
