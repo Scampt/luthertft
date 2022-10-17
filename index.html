@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,38 +12,42 @@
     <script type="text/javascript" src="./rubbable.js"></script>
 
 </head>
-<body>
-        <main>
-                <div class="luther-info">
-                    <figure class="luther-box" id="luther">
-                        <img src="img/luther.png" alt="" srcset="">
-                    </figure>
-                    
-                    <div class="cofre" id="cofre-box">
-                            <a href="javascript:;" class="link-gif" onclick="sup1.play(); return false;" id="gif-link">
-                                <img id="cofre2" class="cofre-img" src="" rel:animated_src="img/cofre.gif" rel:auto_play="0"/>
-                            </a>
-                    </div>
-                <ul class="luther-texto" id="lutherTexto">
-                    <li>Vaya... !Veo que me has encontrado!</li>
-                    <li>Para serte sincero no pensé que fueras a encontrarme tan rápido...</li>
-                    <li>Permiteme presentarme viajero...</li>
-                    <li>Verás, soy Luther, vengo de <span class="alien-word">#?%&$!</span></li>
-                    <li>tuve conflictos después de haber <span class="alien-word">+#$@&</span> en <span class="alien-word">$?#&+</span> y he terminado aquí.</li>
-                    <li>Bienvenido a mi mundo Viajero, prepárate para lo que está por venir.</li>
-                    <li>Que esperas para conocerme</li>
-                </ul>
 
-                <div class="hub-box" id="hub-box">
-                    <a href="#" class="link-hub" id="hub">Ir al HUB</a>
-                </div>
+<body>
+    <main>
+        <div class="luther-info">
+            <figure class="luther-box" id="luther">
+                <img src="img/luther.png" alt="" srcset="">
+            </figure>
+
+            <div class="cofre" id="cofre-box">
+                <a href="javascript:;" class="link-gif" id="gif-link" title="hola">
+                    <img id="cofre2" class="cofre-img" src="" rel:animated_src="img/cofre.gif" rel:auto_play="0"
+                        alt="hola" />
+                </a>
             </div>
-        </main>
-        <script type="text/javascript">
-            var sup1 = new SuperGif({ gif: document.getElementById('cofre2') } );
-            sup1.load();
-        </script>
-        <script src="https://kit.fontawesome.com/5b339fc774.js" crossorigin="anonymous"></script>
-        <script src="cofre.js"></script>
+            <ul class="luther-texto" id="lutherTexto">
+                <li id="hijo_1">Vaya... !Veo que me has encontrado!</li>
+                <li id="hijo_2">Para serte sincero no pensé que fueras a encontrarme tan rápido...</li>
+                <li id="hijo_3">Permiteme presentarme viajero...</li>
+                <li id="hijo_4">Verás, soy Luther, vengo de <span class="alien-word">#?%&$!</span></li>
+                <li id="hijo_5">tuve conflictos después de haber <span class="alien-word">+#$@&</span> en <span
+                        class="alien-word">$?#&+</span> y he terminado aquí.</li>
+                <li id="hijo_6">Bienvenido a mi mundo Viajero, prepárate para lo que está por venir.</li>
+                <li id="hijo_7">Que esperas para conocerme</li>
+            </ul>
+
+            <div class="hub-box" id="hub-box">
+                <a href="#" class="link-hub" id="hub">Ir al HUB</a>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript">
+        var sup1 = new SuperGif({ gif: document.getElementById('cofre2') });
+        sup1.load();
+    </script>
+    <script src="https://kit.fontawesome.com/5b339fc774.js" crossorigin="anonymous"></script>
+    <script src="cofre.js"></script>
 </body>
+
 </html>
