@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LutherTFT</title>
-    <link rel="shortcut 1icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/mobile.css">
     <script type="text/javascript" src="./libgif.js"></script>
-    <script type="text/javascript" src="./rubbable.js"></script>
 
 </head>
-
-<body>
+<body id="cuerpo">
+    <div class="contenedor" id="loading">
+        <img src="img/loading.gif" class="indicador" alt="">
+    </div>
     <main>
         <div class="luther-info">
             <figure class="luther-box" id="luther">
@@ -21,24 +21,23 @@
             </figure>
 
             <div class="cofre" id="cofre-box">
-                <a href="javascript:;" class="link-gif" id="gif-link" title="hola">
-                    <img id="cofre2" class="cofre-img" src="" rel:animated_src="img/cofre.gif" rel:auto_play="0"
-                        alt="hola" />
+                <a href="javascript:;" class="link-gif" onclick="sup1.play(); return false;" id="gif-link">
+                    <img id="cofre2" class="cofre-img" src="" rel:animated_src="img/cofre.gif" rel:auto_play="0"/>
                 </a>
-            </div>
+        </div>
+            
             <ul class="luther-texto" id="lutherTexto">
                 <li id="hijo_1">Vaya... !Veo que me has encontrado!</li>
                 <li id="hijo_2">Para serte sincero no pensé que fueras a encontrarme tan rápido...</li>
                 <li id="hijo_3">Permiteme presentarme viajero...</li>
                 <li id="hijo_4">Verás, soy Luther, vengo de <span class="alien-word">#?%&$!</span></li>
-                <li id="hijo_5">tuve conflictos después de haber <span class="alien-word">+#$@&</span> en <span
-                        class="alien-word">$?#&+</span> y he terminado aquí.</li>
+                <li id="hijo_5">tuve conflictos después de haber <span class="alien-word">+#$@&</span> en <span class="alien-word">$?#&+</span> y he terminado aquí.</li>
                 <li id="hijo_6">Bienvenido a mi mundo Viajero, prepárate para lo que está por venir.</li>
                 <li id="hijo_7">Que esperas para conocerme</li>
             </ul>
 
             <div class="hub-box" id="hub-box">
-                <a href="#" class="link-hub" id="hub">Ir al HUB</a>
+                <a href="https://luthertft.myshopify.com" class="link-hub" id="hub">Ir al HUB</a>
             </div>
         </div>
     </main>
@@ -46,8 +45,6 @@
         var sup1 = new SuperGif({ gif: document.getElementById('cofre2') });
         sup1.load();
     </script>
-    <script src="https://kit.fontawesome.com/5b339fc774.js" crossorigin="anonymous"></script>
     <script src="cofre.js"></script>
 </body>
-
 </html>

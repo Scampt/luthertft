@@ -1,3 +1,4 @@
+/* ESTILOS GENERALES */
 * {
     margin: 0;
     padding: 0;
@@ -12,39 +13,68 @@ body {
     overflow: hidden;
     text-align: center;
     color: #fff;
-    background-image: url("../img/estrellas.gif");
+    background: #000;
     background-size: 150px;
 }
 
-/* GIF DEL COFRE */
+.cambiarFondo {
+    animation-name: cambiarFondo;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cambiarFondo {
+    from {
+        background-color: #000;
+    }
+    to {
+        background-image: url("../img/estrellas.gif");
+        ;
+    }
+}
+
+/* ESTILOS DEL SCREEN LOADER */
+.contenedor {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.indicador {
+    width: 200px;
+}
+
+/* ESTILOS DEL COFRE */
 .cofre {
     width: 100%;
+    visibility: hidden;
+    margin-top: 300px;
     position: absolute;
     top: 0;
-    animation-name: animarCofre;
-    animation-duration: 5s;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
+    /* animation-name: animarCofre; */
+    /* animation-duration: 5s; */
+    /* animation-delay: 1s; */
+    /* animation-iteration-count: infinite; */
 }
 
-/* .jsgif {
-    margin-left: 50px;
-} */
-
-
-
-.ocultarGif {
-    animation: esconderGif .5s ease-in-out;
+.mostrarCofre {
+    visibility: visible;
+    animation: mostrar 1s ease-in-out;
 }
 
+.esconderGif {
+    animation: esconder .5s ease-in-out;
+}
 
-
-.quitarCofre {
+.quitarGif {
     cursor: default;
     pointer-events: none;
 }
 
-/* informacion y foto de luther */
+/* FOTO DE LUTHER Y TEXTO */
 .luther-info {
     text-align: center;
 }
@@ -55,11 +85,9 @@ body {
 }
 
 .mostrarLuther {
-    animation: mostrarLuther 2s ease-in-out;
+    animation: mostrar 3s ease-in-out;
     display: block;
 }
-
-
 
 .luther-box img {
     width: 220px;
@@ -74,7 +102,7 @@ body {
 }
 
 .mostrarLutherTexto {
-    animation: mostrarLutherTexto 1.5s ease-in-out;
+    animation: mostrar 4s ease-in-out;
     display: flex;
 }
 
@@ -87,7 +115,7 @@ body {
     position: absolute;
     text-align: center;
     list-style: none;
-    animation: cambiarTexto 5s 1;
+    animation: cambiarTexto 3.5s 1;
     font-size: 50px;
     opacity: 1;
 }
@@ -126,104 +154,91 @@ body {
     display: block;
 }
 
-
-
 /* MEDIAQUERIES */
 @media (min-width:768px) {
     main .luther-box img {
         width: 240px
     }
+    .luther-texto li {
+        margin-top: 30%;
+        position: absolute;
+        font-size: 50px;
+    }
 }
 
-@media (min-width:1000px) {
+@media  (min-width:1000px) {
     main .luther-box img {
         width: 220px;
     }
 }
 
+/* KEYFRAMES */
+/* @keyframes animarCofre {
+    0% {
+        margin: 0;
+    }
+    50% {
+        margin-top: 500px;
+    }
+    100% {
+        margin: 0;
+    }
+} */
+
+@keyframes esconder {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes mostrar {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 @keyframes mostrarHub {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
         visibility: visible;
     }
-
-}
-
-@keyframes cambiarTexto {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
     }
-
-    10% {
-        opacity: 1;
-        transform: translateZ(0);
+    @keyframes cambiarTexto {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+    
+        10% {
+            opacity: 1;
+            transform: translateZ(0);
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+    
+    @keyframes ocultarTexto {
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    
+        100% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
     }
-}
-
-@keyframes ocultarTexto {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-}
-
-@keyframes mostrarLutherTexto {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-
-@keyframes mostrarLuther {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes esconderGif {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes animarCofre {
-    0% {
-        margin: 0;
-    }
-
-    50% {
-        margin-top: 500px;
-    }
-
-    100% {
-        margin: 0;
-    }
-}

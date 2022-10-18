@@ -1,28 +1,44 @@
+// CODIGO PARA ACCIONES DESPUES DE DAR CLICK AL COFRE
 let cofreContenedor = document.getElementById("cofre-box")
 let gifEnlace = document.getElementById("gif-link");
 let luther = document.getElementById("luther");
 let lutherTexto = document.getElementById("lutherTexto");
 let linkHub = document.getElementById("hub");
 let contenedorHub = document.getElementById("hub-box");
+let loadingIndicador = document.getElementById("loading")
+let cuerpo = document.getElementById("cuerpo")
 
-console.log("tenemos", lutherTexto)
+// CODIGO PARA EL SCREEN LOADER
+window.onload = function () {
+    setTimeout(function () {
+    if(loadingIndicador) {
+        loadingIndicador.classList.toggle("esconderGif")
+        loadingIndicador.style.opacity = 0
+        loadingIndicador.classList.toggle("quitarGif")
 
+        cofreContenedor.classList.toggle("mostrarCofre")
+        cuerpo.classList.toggle("cambiarFondo")
+    }
+}, 4500)
+}
 gifEnlace.addEventListener("click", cofreAbierto)
 
-
 function cofreAbierto() {
-    gifEnlace.classList.toggle("ocultarGif");
+    gifEnlace.classList.toggle("esconderGif");
     gifEnlace.style.opacity = 0;
-    gifEnlace.classList.toggle("quitarCofre");
-    console.log("luther", luther)
+    gifEnlace.classList.toggle("quitarGif");
+
     luther.classList.toggle("mostrarLuther");
     luther.style.opacity = 1;
 
     lutherTexto.classList.toggle("mostrarLutherTexto");
     lutherTexto.style.opacity = 1;
+
     animacionNext(1)
 }
 
+
+// CODIGO PARA EL TEXTO DE LUTHER
 let level = 1
 let loop = 0
 
@@ -43,5 +59,4 @@ const animacionNext = (i) => {
             animacionNext(i + 1);
         }
     });
-
 }
