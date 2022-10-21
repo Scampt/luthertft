@@ -48,6 +48,17 @@ body {
 }
 
 /* ESTILOS DEL COFRE */
+
+/* .jsgif {
+    width: 50%;
+    margin: auto;
+} */
+
+.link-gif {
+    display: inline-block;
+    width: 480px;
+}
+
 .cofre {
     width: 100%;
     visibility: hidden;
@@ -167,6 +178,7 @@ body {
 }
 
 @media  (min-width:1000px) {
+
     main .luther-box img {
         width: 220px;
     }
